@@ -26,14 +26,21 @@ export class LoginComponent {
     this.http.post('http://localhost:5298/api/Account/login', this.loginObj).subscribe((res: any) => {
       if (res.result) {
         debugger;
-        //this.router.navigateByUrl('db')
+        this.router.navigateByUrl('db')
         alert('login success');
-        setTimeout(() => {
-          this.router.navigateByUrl('db');
-        }, 100);
+        // setTimeout(() => {
+        //   this.router.navigateByUrl('db');
+        // }, 100);
+
+        
+
+
       } else {
         alert(res.message);
       }
     });
   }
+
+
+  
 }
