@@ -32,7 +32,7 @@ export class RegisterComponent {
         
       }else{
         alert(res.message);
-        
+        this.router.navigate(['/login']);
       }
     })
     
